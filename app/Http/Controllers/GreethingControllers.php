@@ -10,6 +10,8 @@ class GreethingControllers extends Controller
     {
         $greeting = null;
         $information = null;
+        $key = null;
+        $element = array('おはようございます', 'こんにちは', 'こんばんは', 'おやすみ');
 
         if ($timeZone == 'morning') {
             $information = '朝のあいさつ';
@@ -25,7 +27,8 @@ class GreethingControllers extends Controller
             $greeting = 'おやすみ';
         } elseif ($timeZone == 'random') {
             $information = 'ランダムなメッセージ';
-            # code...
+            $key = array_rand($element, 1);
+            $greeting = $element[$key];
         } else {
             $information = '自由なメッセージ';
             $greeting = $timeZone;
