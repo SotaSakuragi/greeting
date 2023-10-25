@@ -7,7 +7,7 @@
     <title>挨拶アプリ</title>
 </head>
 <body>
-    <h1>テストのあいさつ</h1>
-    <h2>{{ 'timeZone' }}</h2>
+    <h1>{{ $information }}</h1>
+    <h2>{{ $greeting }}</h2>
 </body>
 </html>

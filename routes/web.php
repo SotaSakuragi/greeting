@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\GreethingControllers;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/comments/{timeZone}', function ($timeZone) {
-    return view('greeting', ['timeZone' => $timeZone]);
-});
+Route::get('/comments/{timeZone}', [GreethingControllers::class, 'greeting']);
